@@ -1035,7 +1035,11 @@ tr.hover{
   vertical-align: top;
   transition-property: margin-left;
 }
-
+@media screen and (max-width:991px){
+  #customSlider{
+    height: 818px;
+  }
+}
 @media screen and (max-width:767px){
   #portfolio .portfolio-item img {
     width: 100%;
