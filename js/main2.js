@@ -317,6 +317,7 @@ function validateForm(){
         for(let i=0;i<nizRb.length;i++){
             nizRb[i].checked = false;
         }
+        document.querySelector("#brojSlova").textContent='0/150'; 
     }
     return false;
 }
