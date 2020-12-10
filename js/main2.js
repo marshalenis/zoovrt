@@ -309,7 +309,16 @@ function validateForm(){
         showError(form['message'], 'Morate popuniti ovo polje!');
         passed = false;
     }
-    return passed;
+    if(passed){
+        document.querySelector("#sendmessage").style.display='block';
+        form['name'].value ='';
+        form['email'].value='';
+        form['message'].value='';
+        for(let i=0;i<nizRb.length;i++){
+            nizRb[i].checked = false;
+        }
+    }
+    return false;
 }
 document.querySelector("#komentar").addEventListener("keyup", function(){
     document.querySelector("#brojSlova").textContent =`${document.querySelector("#komentar").value.length}/150`;
